@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+
+<title>About Page</title>
+</head>
+<body>
+	<section>
+		<div class="container"> 
+		<div class="row">
+		 <div class="col-md-6 offet-md-3"> <div class="my-card">
+		<h1 class="text-center">Register here</h1>
+		<form action="" th:action="@{/do_register}" method="post">
+			
+			<!-- name -->
+			<div class="form-group">
+				<label for="name_field">Your Name</label> <input type="text"
+					class="form-control" 
+					id="name_field" name="name"aria-describedby="emailHelp"
+					placeholder="Enter name" required/>
+			</div>
+			
+			<!-- Email -->
+			<div class="form-group">
+				<label for="email_field">Your Email</label>
+				 <input type="email"
+					class="form-control" 
+					id="email_field" name="email" aria-describedby="emailHelp"
+					placeholder="Enter email" required/>
+			</div>
+			
+			<!-- Password -->
+			<div class="form-group">
+				<label for="password_field">Your Password</label>
+				 <input type="password"
+					class="form-control" 
+					id="email_field" name="password" aria-describedby="emailHelp"
+					placeholder="Enter password" required/>
+			</div>
+			<!-- About -->
+			
+			<div class="form-group">
+				<textarea  placeholder="Enter something about your self" rows="10" class="form-control"></textarea>
+			</div>
+			
+			<!-- Terms and Condition -->			
+			<div class="container text-center"> 			
+			<input type="checkbox" name="agreement" id="agreement">Accept Terms and Conditions</input>
+			</div>
+			
+			<!-- Submit/ reset button -->
+			<div class="container text-center"> 
+			<button type="submit" class="btn bg-primary text-white"> submit </button>
+			<button type="reset" class="btn btn-warning"> reset </button>
+			</div>
+			
+		</form>
+
+		</div></div> </div> </div>
+
+
+	</section>
+</body>
+</html>
